@@ -11,5 +11,17 @@
   "license": "MIT",
   "peerDependencies": {
     "prettier": ">= 2.7.1"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NewCeptionDev/prettier-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NewCeptionDev/prettier-config/issues"
+  },
+  "homepage": "https://github.com/NewCeptionDev/prettier-config#readme"
 }
