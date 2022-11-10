@@ -1,0 +1,15 @@
+{
+  "name": "@newceptiondev/prettier-config",
+  "version": "1.0.0",
+  "description": "Prettier Config",
+  "main": "index.json",
+  "keywords": [
+    "Prettier",
+    "Config"
+  ],
+  "author": "NewCeptionDev",
+  "license": "MIT",
+  "peerDependencies": {
+    "prettier": ">= 2.7.1"
+  }
+}
