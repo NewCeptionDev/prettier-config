@@ -13,8 +13,8 @@
     "prettier": ">= 2.7.1"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",

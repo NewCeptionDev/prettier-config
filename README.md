@@ -5,7 +5,7 @@ Prettier Config used in projects developed by NewCeptionDev
 ## Installation
 
 Install the package via npm:
-> npm install --save-dev --save-exact
+> npm install --save-dev --save-exact @newceptiondev/prettier-config
 
 I would recommend using the ***--save-exact*** addition when installing the package to make sure, that the config won't change without your intention to do so.
 
