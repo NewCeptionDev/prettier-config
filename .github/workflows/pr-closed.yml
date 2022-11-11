@@ -39,7 +39,7 @@ jobs:
 
       - name: Git push version bump
         env :
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.FORCE_PUSH_SECRET }}
         run : git push origin main --follow-tags --force
 
       - name: Set local variable with new version
