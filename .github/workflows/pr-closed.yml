@@ -38,7 +38,7 @@ jobs:
         run : npm version patch
 
       - name: Git push version bump
-        run : git push origin main --follow-tags --force
+        run : git push --follow-tags --force origin main
 
       - name: Set local variable with new version
         run : echo "NEW_VARIABLE=$(npm pkg get version)"
