@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-          cache       :
+          cache       : "npm"
 
       - name: Git Configuration
         run : git config --global user.name "GitHub Actions"
