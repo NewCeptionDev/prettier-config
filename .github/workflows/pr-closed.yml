@@ -20,21 +20,21 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-          cache       :
+          cache       : "npm"
 
       - name: Git Configuration
         run : git config --global user.name "GitHub Actions"
 
       - name: Apply version bump (major)
-        if  : contains(github.event.pull_request.labels.*.name, "major")
+        if  : contains(github.event.pull_request.labels.*.name, 'major')
         run : npm version major
 
       - name: Apply version bump (minor)
-        if  : contains(github.event.pull_request.labels.*.name, "minor")
+        if  : contains(github.event.pull_request.labels.*.name, 'minor')
         run : npm version minor
 
       - name: Apply version bump (patch)
-        if  : contains(github.event.pull_request.labels.*.name, "patch")
+        if  : contains(github.event.pull_request.labels.*.name, 'patch')
         run : npm version patch
 
       - name: Git push version bump
