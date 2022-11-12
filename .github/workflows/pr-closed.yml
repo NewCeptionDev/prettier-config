@@ -25,9 +25,7 @@ jobs:
           cache       : "npm"
 
       - name: Git Configuration
-        run : |
-          git config --global user.name ${{ secrets.GIT_USER }}
-          git config --global user.email ${{ secrets.GIT_EMAIL }}
+        run : git config --global user.name 'Github Actions'
 
       - name: Apply version bump (major)
         if  : contains(github.event.pull_request.labels.*.name, 'major')
@@ -42,12 +40,10 @@ jobs:
         run : npm version patch
 
       - name: Git push version bump
-        env:
-           GITHUB_TOKEN: ${{ secrets.FORCE_PUSH_SECRET }}
-        run : git push --follow-tags --force origin
+        run : git push --follow-tags --force origin main
 
       - name: Set local variable with new version
-        run : echo "NEW_VARIABLE=$(npm pkg get version)"
+        run : echo "NEW_VERSION=$(npm pkg get version)"
 
       - name: Comment new version on PR
         uses: mshick/add-pr-comment@v2
