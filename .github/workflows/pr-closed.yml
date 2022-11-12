@@ -40,7 +40,9 @@ jobs:
         run : npm version patch
 
       - name: Git push version bump
-        run : git push --follow-tags --force origin main
+        env:
+           GITHUB_TOKEN: ${{ secrets.FORCE_PUSH_SECRET }}
+        run : git push --follow-tags --force origin
 
       - name: Set local variable with new version
         run : echo "NEW_VARIABLE=$(npm pkg get version)"
