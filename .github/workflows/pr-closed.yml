@@ -43,9 +43,9 @@ jobs:
         run : git push --follow-tags --force origin main
 
       - name: Set local variable with new version
-        run : echo "NEW_VERSION=$(npm pkg get version)" >> $GITHUB_ENV
+        run : echo "NEW_VERSION=$(npm pkg get version | sed 's/^"\(.*\)"$/\1/')" >> $GITHUB_ENV
 
       - name: Comment new version on PR
         uses: mshick/add-pr-comment@v2
         with:
-          message: Version bumped to ${{ env.NEW_VERSION }} 🚀
+          message: 🚀 Version bumped to ${{ env.NEW_VERSION }} 🚀
